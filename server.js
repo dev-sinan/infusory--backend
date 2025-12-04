@@ -13,7 +13,7 @@ const app = express();
 const corsOptions = {
   origin: [
     "http://localhost:5173",
-    "https://infusory-frontend-ghxm-fak9q192b-dev-sinans-projects.vercel.app",
+     "https://infusory-frontend-ghxm-k390gsyeg-dev-sinans-projects.vercel.app",
     
   ],
   credentials: true,

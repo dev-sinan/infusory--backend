@@ -10,5 +10,7 @@ node_modules/
 # Build files
 dist/
 build/
-uploads/
+uploads/*
+!uploads/.gitkeep
+
 node_modules/

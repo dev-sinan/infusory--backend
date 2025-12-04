@@ -10,7 +10,7 @@ const app = express();
 
 // ✅ FIXED CORS — allow both ports
 app.use(cors({
-  origin: ["http://localhost:5173", "https://infusory-frontend-ghxm-fak9q192b-dev-sinans-projects.vercel.app/"],
+  origin: ["http://localhost:5173", "https://infusory-frontend-ghxm-fak9q192b-dev-sinans-projects.vercel.app"],
   methods: ["GET", "POST", "DELETE", "PUT"],
 }));
 

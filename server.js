@@ -9,10 +9,19 @@ dotenv.config();
 const app = express();
 
 // ✅ FIXED CORS — allow both ports
-app.use(cors({
-  origin: ["http://localhost:5173", "https://infusory-frontend-ghxm-fak9q192b-dev-sinans-projects.vercel.app"],
-  methods: ["GET", "POST", "DELETE", "PUT"],
-}));
+
+const corsOptions = {
+  origin: [
+    "http://localhost:5173",
+    "https://infusory-frontend-ghxm-fak9q192b-dev-sinans-projects.vercel.app",
+    
+  ],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
